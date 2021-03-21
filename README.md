@@ -14,5 +14,5 @@ An assignment from [The Odin Project](https://www.theodinproject.com/lessons/sho
 
 ## Status: In Progress
 
-View my progress live on [Github Pages](https://github.com/programmurr/shopping-cart)
+View my progress live on [Github Pages](https://programmurr.github.io/shopping-cart/)
 

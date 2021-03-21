@@ -1,0 +1,26 @@
+[
+    {
+      "id": 1,
+      "name": "Pint of Guinness",
+      "image": "./img/guinness.jpg",
+      "price": "2.99"
+    },
+    {
+      "id": 2,
+      "name": "Shot of Whiskey",
+      "image": "./img/whiskey.jpeg",
+      "price": "1.99"
+    },
+    {
+      "id": 3,
+      "name": "Fruity Cocktail",
+      "image": "./img/cocktail.jpeg",
+      "price": "3.99"
+    },
+    {
+      "id": 4,
+      "name": "Espresso Shot",
+      "image": "./img/coffee.jpeg",
+      "price": "2.49"
+    }
+  ]
