@@ -15,11 +15,11 @@ function App() {
     <Router>
       <div className="AppContent">
         <nav>
-              <Link to="/" id="HomeLink">Home</Link>
+              <Link to="/shopping-cart" id="HomeLink">Home</Link>
               <Link to="/shop" id="ShopLink">Shop</Link>
         </nav>
         <Switch>
-          <Route exact path="/">
+          <Route exact path="/shopping-cart">
             <Home />
           </Route>
           <Route path="/shop">
