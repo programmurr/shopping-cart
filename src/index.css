@@ -13,21 +13,16 @@ body {
 }
 
 /*  Nav Bar */
-.NavBar {
+
+nav {
   display: flex;
-  justify-content: center;
+  justify-content: space-around;
+  align-items: center;
   background-color: #aaadda;
+  height: 7vh;
 }
 
-.HomePara {
-  margin-right: 2vw;
-}
-
-.ShopPara {
-  margin-left: 2vw;
-}
-
-.NavBar > p:hover {
+nav > a:hover {
   cursor: pointer;
 }
 
@@ -38,16 +33,12 @@ body {
   align-items: center;
 }
 
-/* Shop Page */
-
-.Shop > h2 {
-  display: flex;
-  justify-content: center;
-}
+/* StickyBar */
 
 .StickyBar {
   display: flex;
   justify-content: center;
+  align-items: center;
   background-color: #f7f596;
 }
 
@@ -55,8 +46,15 @@ body {
   margin-right: 1vw;
 }
 
-.StickyBar > button {
+.StickyBar > a {
   margin-left: 1vw;
+}
+
+/* Shop Page */
+
+.Shop > h2 {
+  display: flex;
+  justify-content: center;
 }
 
 .ShopList {

@@ -1,5 +1,10 @@
 import React from 'react';
-import Navbar from './components/NavBar';
+import {
+  BrowserRouter as Router,
+  Switch,
+  Route, 
+  Link
+} from 'react-router-dom';
 import Home from './components/Home';
 import Shop from './components/shop-components/Shop';
 import Checkout from './components/checkout-components/Checkout';
@@ -7,13 +12,31 @@ import Footer from './components/Footer';
 
 function App() {
   return (    
-    <div className="AppContent">
-      <Navbar />
-      <Home />
-      <Shop />
-      <Checkout />
-      <Footer />
-    </div>
+    <Router>
+      <div className="AppContent">
+        <nav>
+              <Link to="/" id="HomeLink">Home</Link>
+              <Link to="/shop" id="ShopLink">Shop</Link>
+        </nav>
+        <Switch>
+          <Route exact path="/">
+            <Home />
+          </Route>
+          <Route path="/shop">
+            <div className="StickyBar">
+              <p>Items in Basket: 0</p>
+              <Link to="/checkout">Checkout</Link>
+            </div>
+            <Shop>
+            </Shop>
+          </Route>
+          <Route path="/checkout">
+            <Checkout />
+          </Route>
+        </Switch>
+        <Footer />
+      </div>
+    </Router>
   );
 }
 
