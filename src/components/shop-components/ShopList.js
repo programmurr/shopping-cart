@@ -23,7 +23,7 @@ function ShopList(props) {
   return (
     <div className="ShopList">
       {shopItems.map((item, index) => (
-        <div key={item.id}>
+        <div key={item.id} className="ShopItem">
           <h3>{item.name}</h3>
           <img src={imgArray[index]} alt={item.name}/>
           <p>{item.price}</p>

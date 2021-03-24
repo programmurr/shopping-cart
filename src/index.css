@@ -1,6 +1,7 @@
 html {
   position: relative;
   min-height: 100%;
+  height: 100%;
 }
 
 body {
@@ -12,6 +13,11 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
+.AppContent {
+  display: flex;
+  flex-direction: column;
+}
+
 /*  Nav Bar */
 
 nav {
@@ -19,7 +25,8 @@ nav {
   justify-content: space-around;
   align-items: center;
   background-color: #aaadda;
-  height: 7vh;
+  height: 3em;
+  min-height: 3em;
 }
 
 nav > a:hover {
@@ -40,17 +47,33 @@ nav > a:hover {
   justify-content: center;
   align-items: center;
   background-color: #f7f596;
+  height: 2.5em;
+  min-height: 2.5em;
 }
 
 .StickyBar > p {
-  margin-right: 1vw;
+  margin: 0 1vw 0 0;
 }
 
 .StickyBar > a {
   margin-left: 1vw;
 }
 
+.sticky {
+  position: fixed;
+  top: 0;
+  width: 100%;
+}
+
 /* Shop Page */
+
+.Shop {
+  margin-bottom: 5vh;
+}
+
+.expand {
+  margin-top: 2.5em;
+}
 
 .Shop > h2 {
   display: flex;
@@ -60,6 +83,15 @@ nav > a:hover {
 .ShopList {
   display: flex;
   justify-content: center;
+  flex-wrap: wrap;
+  margin-bottom: 2vh;
+}
+
+.ShopItem {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 0 3vw 0 3vw;
 }
 
 img {
@@ -97,8 +129,10 @@ img {
   display: flex;
   justify-content: center;
   background-color: #aaadda;
-  position: absolute;
+  position: relative;
   width: 100%;
+  height: 5vh;
   bottom: 0;
+  left: 0;
   overflow: hidden;
 }

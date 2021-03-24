@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import {
   BrowserRouter as Router,
   Switch,
@@ -11,19 +11,42 @@ import Checkout from './components/checkout-components/Checkout';
 import Footer from './components/Footer';
 
 function App() {
+
+  useEffect(() => {
+    const navBar = document.getElementById('stickyNav');
+    const shop = document.getElementById('shopPage');
+    const sticky = navBar.offsetTop;
+  
+    function myFunction() {
+      if (window.pageYOffset >= sticky) {
+        shop.classList.add('expand');
+        navBar.classList.add('sticky');
+      } else {
+        shop.classList.remove('expand');
+        navBar.classList.remove('sticky');
+      }
+    }
+  
+    window.onscroll = function() {
+      myFunction()
+    }
+  })
+  
+
+
   return (    
     <Router>
       <div className="AppContent">
         <nav>
-              <Link to="/shopping-cart" id="HomeLink">Home</Link>
+              <Link to="/shopping-cart/" id="HomeLink">Home</Link>
               <Link to="/shop" id="ShopLink">Shop</Link>
         </nav>
         <Switch>
-          <Route exact path="/shopping-cart">
+          <Route exact path="/shopping-cart/">
             <Home />
           </Route>
           <Route path="/shop">
-            <div className="StickyBar">
+            <div className="StickyBar" id="stickyNav">
               <p>Items in Basket: 0</p>
               <Link to="/checkout">Checkout</Link>
             </div>
