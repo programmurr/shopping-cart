@@ -75,7 +75,7 @@ nav > a:hover {
 /* Shop Page */
 
 .Shop {
-  margin-bottom: 5vh;
+  margin-bottom: 2.5em;
 }
 
 .expand {
@@ -89,6 +89,7 @@ nav > a:hover {
 
 .ShopList {
   display: flex;
+  flex-direction: row;
   justify-content: center;
   flex-wrap: wrap;
   margin-bottom: 2vh;
@@ -96,13 +97,17 @@ nav > a:hover {
 
 .ShopItem {
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   align-items: center;
   margin: 0 3vw 0 3vw;
 }
 
-img {
-  max-width: 150px;
+.ShopItem > p {
+  margin-left: 1em;
+}
+
+.ShopItem > button {
+  margin-left: 1em;
 }
 
 /* Checkout Page */

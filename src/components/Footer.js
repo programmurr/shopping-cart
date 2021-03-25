@@ -4,7 +4,7 @@ function Footer(props) {
   return (
     <div className="Footer">
       <p>
-        Drink responsibly. If you need help, visit <a href="https://www.drinkaware.ie/">DrinkAware</a>
+        Currency rates provided by <a href="https://www.exchangerate-api.com/">ExchangeRate-API</a>
       </p>
     </div>
   );

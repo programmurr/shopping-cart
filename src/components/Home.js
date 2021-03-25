@@ -5,8 +5,7 @@ function Home(props) {
     <div className="Home">
       <h1>Home</h1>
       <p>
-        Welcome to the drink-buying site! Buy all of your drinks
-        in the Shop!
+        Welcome to the currency-buying site! Lose money in the shop!
       </p>
     </div>
   );
