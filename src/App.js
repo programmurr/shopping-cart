@@ -12,28 +12,6 @@ import Footer from './components/Footer';
 
 function App() {
 
-  useEffect(() => {
-    const navBar = document.getElementById('stickyNav');
-    const shop = document.getElementById('shopPage');
-    const sticky = navBar.offsetTop;
-  
-    function myFunction() {
-      if (window.pageYOffset >= sticky) {
-        shop.classList.add('expand');
-        navBar.classList.add('sticky');
-      } else {
-        shop.classList.remove('expand');
-        navBar.classList.remove('sticky');
-      }
-    }
-  
-    window.onscroll = function() {
-      myFunction()
-    }
-  })
-  
-
-
   return (    
     <Router>
       <div className="AppContent">
