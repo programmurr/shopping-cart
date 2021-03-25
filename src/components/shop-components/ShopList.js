@@ -1,7 +1,7 @@
 import React from 'react';
 import shopItems from './shopItems.json';
 import Guinness from '../../img/guinness.jpg';
-import Whiskey from '../../img/cocktail.jpeg';
+import Whiskey from '../../img/whiskey.jpeg';
 import Lager from '../../img/lager.jpeg';
 import Cocktail from '../../img/cocktail.jpeg';
 import Coffee from '../../img/coffee.jpeg';
@@ -26,7 +26,7 @@ function ShopList(props) {
         <div key={item.id} className="ShopItem">
           <h3>{item.name}</h3>
           <img src={imgArray[index]} alt={item.name}/>
-          <p>{item.price}</p>
+          <p>£{item.price}</p>
           <button>Buy</button>
         </div>
       ))}

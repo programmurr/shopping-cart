@@ -19,6 +19,7 @@ body {
   height: 100%;
 }
 
+/* Container div */
 .AppContent {
   display: flex;
   flex-direction: column;
