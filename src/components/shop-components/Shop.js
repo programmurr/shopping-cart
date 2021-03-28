@@ -1,12 +1,37 @@
 import React, { useEffect, useState } from 'react';
 require('dotenv').config({ path: '../../../.env' });
 
-// Add number for amount input next
-// Should style it too
 function Shop(props) {
   const currencyKey = process.env.REACT_APP_CURRENCY_API
 
   const [ currencies, setCurrencies ] = useState({});
+  const [ buyAmount, setBuyAmount ] = useState("");
+
+  const handleChange = (e) => {
+    setBuyAmount(e.target.value);
+  }
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+
+    const form = e.target;
+    const input = form.querySelector('input');
+    const amount = parseInt(buyAmount);
+    const rate = Object.entries(currencies).filter(([currency, rate]) => (currency === input.id));
+
+    if (buyAmount === "") {
+      alert('Please enter a currency amount between 1 and 100 units');
+      return;
+    }
+    props.onSubmit({
+      currency: input.name,
+      rate: rate[0][1],
+      amount: amount
+    });
+
+    input.value = "";
+    setBuyAmount("");
+  }
 
   const handleScroll = (navBar, shop, sticky) => {
     if (window.pageYOffset >= sticky) {
@@ -16,6 +41,13 @@ function Shop(props) {
       shop.classList.remove('expand');
       navBar.classList.remove('sticky');
     }
+  }
+
+  const fetchCurrencies = async () => {
+    const data = await fetch (`https://v6.exchangerate-api.com/v6/${currencyKey}/latest/GBP`);
+    const allCurrencies = await data.json();
+    const rates = allCurrencies.conversion_rates;
+    setCurrencies(rates);
   }
 
   useEffect(() => {
@@ -28,12 +60,7 @@ function Shop(props) {
     fetchCurrencies();
   }, [])
 
-  const fetchCurrencies = async () => {
-    const data = await fetch (`https://v6.exchangerate-api.com/v6/${currencyKey}/latest/GBP`);
-    const allCurrencies = await data.json();
-    const rates = allCurrencies.conversion_rates;
-    setCurrencies(rates);
-  }
+  
 
   return (
       <div className="Shop" id="shopPage">
@@ -44,13 +71,22 @@ function Shop(props) {
             <div key={currency} className="ShopItem" id="BaseCurrency">
               <p>Base Currency: {currency}</p>
               <p>Rate: {rate}.00</p>
-              <button>Buy!</button>
             </div>
-            : <div key={currency} className="ShopItem">
+            : <form onSubmit={handleSubmit} key={currency} className="ShopItem">
                 <p>Currency code: {currency}</p>
-                <p>Rate: {rate}</p>
+                <p id="rate">Rate: {rate.toFixed(2)}</p>
+                <label htmlFor={currency}>Amount (1-100 units)</label>
+                <input 
+                  type="number" 
+                  id={currency} 
+                  name={currency} 
+                  min="1" 
+                  max="100" 
+                  amount={buyAmount}
+                  onChange={handleChange}
+                />
                 <button>Buy!</button>
-              </div>
+              </form>
         ))}
         </div>
       </div>

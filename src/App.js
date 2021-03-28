@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import {
   BrowserRouter as Router,
   Switch,
@@ -11,6 +11,14 @@ import Checkout from './components/checkout-components/Checkout';
 import Footer from './components/Footer';
 
 function App() {
+
+  const [ basket, setBasket ] = useState([]);
+
+  const handleSubmit = (currencyItem) => {
+    const oldBasket = basket;
+    const newBasket = oldBasket.concat(currencyItem);
+    setBasket(newBasket);
+  }
 
   return (    
     <Router>
@@ -25,14 +33,15 @@ function App() {
           </Route>
           <Route path="/shop">
             <div className="StickyBar" id="stickyNav">
-              <p>Items in Basket: 0</p>
+              <p>Items in Basket: {basket.length}</p>
               <Link to="/checkout">Checkout</Link>
             </div>
-            <Shop>
-            </Shop>
+            <Shop 
+              onSubmit={handleSubmit}
+            />
           </Route>
           <Route path="/checkout">
-            <Checkout />
+            <Checkout basket={basket}/>
           </Route>
         </Switch>
         <Footer />
