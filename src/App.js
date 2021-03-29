@@ -10,13 +10,26 @@ import Shop from './components/shop-components/Shop';
 import Checkout from './components/checkout-components/Checkout';
 import Footer from './components/Footer';
 
+
 function App() {
 
   const [ basket, setBasket ] = useState([]);
 
-  const handleSubmit = (currencyItem) => {
+  const handleSubmit = (newItem) => {
     const oldBasket = basket;
-    const newBasket = oldBasket.concat(currencyItem);
+    let newBasket;
+
+    if (oldBasket.length > 0) {
+      const index = oldBasket.findIndex((oldItem) => (oldItem.currency === newItem.currency));
+      if (index === -1) {
+        newBasket = oldBasket.concat(newItem);
+      } else {
+        oldBasket[index].amount += newItem.amount;
+        newBasket = oldBasket;
+      }
+    } else {
+      newBasket = oldBasket.concat(newItem);
+    }
     setBasket(newBasket);
   }
 
