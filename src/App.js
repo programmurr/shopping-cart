@@ -7,6 +7,7 @@ import {
 } from 'react-router-dom';
 import Home from './components/Home';
 import Shop from './components/shop-components/Shop';
+import ItemDetail from './components/shop-components/ItemDetail';
 import Checkout from './components/checkout-components/Checkout';
 import Footer from './components/Footer';
 
@@ -15,6 +16,9 @@ function App() {
 
   const [ basket, setBasket ] = useState([]);
 
+  // Checks to see if the current purchased item already exists in the cart
+  // If it already exists, it adds to the existing amount
+  // If not, it concatenates it on to the basket
   const handleSubmit = (newItem) => {
     const oldBasket = basket;
     let newBasket;
@@ -50,7 +54,7 @@ function App() {
           <Route exact path="/shopping-cart/">
             <Home />
           </Route>
-          <Route path="/shop">
+          <Route exact path="/shop">
             <div className="StickyBar" id="stickyNav">
               <p>Items in Basket: {basket.length}</p>
               <Link to="/checkout">Checkout</Link>
@@ -59,6 +63,7 @@ function App() {
               onSubmit={handleSubmit}
             />
           </Route>
+          <Route path="/shop/:currency" component={ItemDetail}/>
           <Route path="/checkout">
             <Checkout basket={basket} onRemove={handleRemove}/>
           </Route>

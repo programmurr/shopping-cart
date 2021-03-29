@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from 'react';
+import { Link } from 'react-router-dom';
 require('dotenv').config({ path: '../../../.env' });
 
 function Shop(props) {
@@ -73,7 +74,7 @@ function Shop(props) {
               <p>Rate: {rate}.00</p>
             </div>
             : <form onSubmit={handleSubmit} key={currency} className="ShopItem">
-                <p>Currency code: {currency}</p>
+                <Link to={`/shop/${currency}`}>Currency code: {currency}</Link>
                 <p id="rate">Rate: {rate.toFixed(2)}</p>
                 <label htmlFor={currency}>Amount (1-100 units)</label>
                 <input 
