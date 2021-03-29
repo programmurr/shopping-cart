@@ -20,6 +20,12 @@ function App() {
     setBasket(newBasket);
   }
 
+  const handleRemove = (removedItem) => {
+    const oldBasket = basket;
+    const newBasket = oldBasket.filter((item) => (item.currency !== removedItem.currency));
+    setBasket(newBasket);
+  }
+
   return (    
     <Router>
       <div className="AppContent">
@@ -41,7 +47,7 @@ function App() {
             />
           </Route>
           <Route path="/checkout">
-            <Checkout basket={basket}/>
+            <Checkout basket={basket} onRemove={handleRemove}/>
           </Route>
         </Switch>
         <Footer />

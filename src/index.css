@@ -139,7 +139,8 @@ nav > a:hover {
   justify-self: center;
 }
 
-.Basket {
+.Basket,
+.EmptyBasket {
   grid-column: 1 / 2;
   grid-row: 2 / 3;
   justify-self: center;
@@ -148,8 +149,13 @@ nav > a:hover {
 .Summary {
   grid-column: 2 / 3;
   grid-row: 2 / 3;
+  height: 5em;
   display: grid;
   justify-content: center;
+}
+
+.Summary > button {
+  height: 2em;
 }
 
 /* Footer */

@@ -19,12 +19,15 @@ function Summary(props) {
     }
   }, [basket])
 
+  const handleBuy = () => {
+    alert("You bought the currency! WHY?!")
+  }
+
 
   return (
     <div className="Summary">
       <p>Total cost: £{cost}</p>
-      <button>Buy</button>
-      <button>Back to the Shop</button>
+      <button onClick={handleBuy}>Buy</button>
     </div>
   );
 }
