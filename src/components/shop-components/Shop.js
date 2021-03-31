@@ -1,10 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
-require('dotenv').config({ path: '../../../.env' });
 
 function Shop(props) {
-  const currencyKey = process.env.REACT_APP_CURRENCY_API
-
   const [ currencies, setCurrencies ] = useState({});
   const [ buyAmount, setBuyAmount ] = useState("");
 
@@ -45,10 +42,21 @@ function Shop(props) {
   }
 
   const fetchCurrencies = async () => {
-    const data = await fetch (`https://v6.exchangerate-api.com/v6/${currencyKey}/latest/GBP`);
-    const allCurrencies = await data.json();
-    const rates = allCurrencies.conversion_rates;
-    setCurrencies(rates);
+    await fetch(`https://api.exchangeratesapi.io/latest?base=GBP`)
+      .then((response) => {
+        if (response.ok) {
+          return response.json();
+        } else {
+          throw new Error("Currency API Shop didn't work");
+        }
+      })
+      .then((responseJson) => {
+          const rates = responseJson.rates;
+          setCurrencies(rates); 
+      })
+      .catch((err) => {
+        console.error(err);
+      });
   }
 
   useEffect(() => {
