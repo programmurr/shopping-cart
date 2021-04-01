@@ -42,7 +42,7 @@ function Shop(props) {
   }
 
   const fetchCurrencies = async () => {
-    await fetch(`https://api.exchangeratesapi.io/latest?base=GBP`)
+    await fetch(`https://api.frankfurter.app/latest?from=GBP`)
       .then((response) => {
         if (response.ok) {
           return response.json();
@@ -51,12 +51,12 @@ function Shop(props) {
         }
       })
       .then((responseJson) => {
-          const rates = responseJson.rates;
-          setCurrencies(rates); 
+        const rates = responseJson.rates;
+        setCurrencies(rates);
       })
       .catch((err) => {
         console.error(err);
-      });
+      });;
   }
 
   useEffect(() => {

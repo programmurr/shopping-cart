@@ -7,8 +7,6 @@ function ItemDetail() {
   let { currency } = useParams();
   const today = format(new Date(), 'yyyy-MM-dd');
   const lastWeek = format(subDays(new Date(), 8), 'yyyy-MM-dd');
-
-  const [ historyObject, setHistoryObject ] = useState({});
   const [ historyRates, setHistoryRates ] = useState({});
 
   useEffect(() => {
@@ -17,8 +15,9 @@ function ItemDetail() {
 
   const fetchItem = async () => {
     await fetch(
-      `https://api.exchangeratesapi.io/history?start_at=${lastWeek}&end_at=${today}&base=GBP&symbols=${currency}`
-    ).then((response) => {
+      `https://api.frankfurter.app/${lastWeek}..${today}?from=GBP&to=${currency}`
+    )
+    .then((response) => {
       if (response.ok) {
         return response.json();
       } else {
@@ -64,14 +63,16 @@ function ItemDetail() {
     if (historyRates.length > 0) {
       return (
         <div className="ItemDetail">
-          <h1>{currency} to GBP</h1>
+          <h1>GBP to {currency}</h1>
           <h2>Previous 7 Working Days</h2>
-          {historyRates.map((rate) => (
-            <div key={rate[0]}>
-              <p>Currency: {rate[0]}</p>
-              <p>Rate: {rate[1]}</p>
-            </div>
-          ))}
+          <div className="CurrencyRates">
+            {historyRates.map((rate) => (
+              <div key={rate[0]} className="RateDate">
+                <p>Date: {rate[0]}</p>
+                <p>Rate: {rate[1]}</p>
+              </div>
+            ))}
+          </div>
         </div>
       )
     } else {
