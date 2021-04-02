@@ -10,10 +10,6 @@ function ItemDetail(props) {
   const [ historyRates, setHistoryRates ] = useState({});
   const [ buyAmount, setBuyAmount ] = useState("");
 
-  useEffect(() => {
-    fetchItem();
-  }, [])
-
   const fetchItem = async () => {
     await fetch(
       `https://api.frankfurter.app/${lastWeek}..${today}?from=GBP&to=${currency}`
@@ -61,6 +57,11 @@ function ItemDetail(props) {
       });
     }
 
+  useEffect(() => {
+    fetchItem();
+  }, [])
+
+
     const handleChange = (e) => {
       setBuyAmount(e.target.value);
     }
@@ -89,7 +90,7 @@ function ItemDetail(props) {
 
     if (historyRates.length > 0) {
       return (
-        <div className="ItemDetail">
+        <div className="ItemDetail" id="itemPage">
           <h1>GBP to {currency}</h1>
           <h2>Previous 7 Working Days</h2>
           <div className="CurrencyRates">
@@ -121,7 +122,9 @@ function ItemDetail(props) {
       )
     } else {
       return (
-        <p>Loading...</p>
+        <div id="itemPage">
+          <p id="LoadingItem">Loading...</p>
+        </div>
       );
     }
 }

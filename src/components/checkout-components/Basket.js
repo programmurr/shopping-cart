@@ -18,7 +18,7 @@ function Basket(props) {
     return (
       <div className="Basket">
         {basket.map((item) => (
-          <div key={item.currency}>
+          <div key={item.currency} className="BasketItem">
             <p>Currency: <Link to={`/shop/${item.currency}`}>{item.currency}</Link></p>
             <p>Rate: {item.rate.toFixed(2)}</p>
             <p>Amount: {item.amount}</p>

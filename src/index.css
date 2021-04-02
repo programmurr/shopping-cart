@@ -53,6 +53,10 @@ nav > a:hover {
   color: #010057;
 }
 
+.Home > p {
+  margin-top: 20em;
+}
+
 /* StickyBar */
 
 .StickyBar {
@@ -112,6 +116,10 @@ nav > a:hover {
   margin: 0 3vw 0 3vw;
 }
 
+label {
+  color: #010057;
+}
+
 .ShopItem > p {
   margin-left: 1em;
   color: #010057;
@@ -121,6 +129,12 @@ nav > a:hover {
 .ShopItem > input,
 .ShopItem > label {
   margin-left: 1em;
+}
+
+#LoadingShop {
+  display: flex;
+  justify-content: center;
+  color: #010057;
 }
 
 /* Item Details Page */
@@ -167,6 +181,12 @@ nav > a:hover {
 .BuyItem > form > input,
 .BuyItem > form > button {
   margin-left: 1em;
+}
+
+#LoadingItem {
+  display: flex;
+  justify-content: center;
+  color: #010057;
 }
 
 /* Checkout Page */
@@ -218,4 +238,1594 @@ nav > a:hover {
 
 .Footer > p {
   color: #010057;
+}
+
+/* Mobile css styling dimensions */
+
+/* APPLE */
+/* iPhone 6/7/8 */
+@media only screen and (max-width: 375px) and (max-height: 667px) {
+  /* Mobile Home Page */
+  .Home {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .Home > h1,
+  .Home > p {
+    color: #010057;
+  }
+
+  .Home > p {
+    margin-top: 50%;
+  }
+
+  /* Mobile Shop Page */
+
+  .Shop {
+    margin-bottom: 2.5em;
+  }
+
+  .expand {
+    margin-top: 2.5em;
+  }
+
+  .Shop > h3 {
+    margin-bottom: 0;
+  }
+
+  .ShopList {
+    margin-bottom: 2vh;
+    font-size: 1em;
+  }
+
+  .ShopItem {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 1em;
+  }
+
+  .ShopItem > p {
+    margin: 0 0 0 0;
+    color: #010057;
+  }
+
+  .ShopItem > button,
+  .ShopItem > input {
+    margin-top: 0.5em;
+    margin-left: 0;
+  }
+
+  #LoadingShop {
+    color: #010057;
+  }
+
+  /* Mobile ItemDetail Page */
+
+  .ItemDetail {
+    margin-bottom: 2.5em;
+  }
+
+  .ItemDetail > h1 {
+    margin-bottom: 0;
+  }
+
+  .CurrencyRates {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .RateDate {
+    margin: 0.5em 0 0.5em 0;
+  }
+
+  .RateDate > p {
+    margin: 0 0 0 0;
+  }
+
+  .BuyItem > p {
+    margin-bottom: 0.5em;
+  }
+
+  .BuyItem > form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .BuyItem > form > input {
+    margin: 1em 0 0 0;
+  }
+
+  .BuyItem > form > button {
+    margin: 1em 0 1em 0;
+  }
+
+  /* Mobile Checkout Page */
+
+  .BasketItem {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .BasketItem > p {
+    margin: 0.5em 0 0 0;
+  }
+
+  .BasketItem > button {
+    margin: 0.5em 0 1em 0;
+  }
+
+  .EmptyBasket > p {
+    margin-top: 0.5em;
+  }
+
+  .Summary > p {
+    margin: 0.5em 0 0 0;
+  }
+}
+/* iPhone 6/7/8 + models for each */
+@media only screen and (max-width: 414px) and (max-height: 736px) {
+  /* Mobile Home Page */
+  .Home {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .Home > h1,
+  .Home > p {
+    color: #010057;
+  }
+
+  .Home > p {
+    margin-top: 50%;
+  }
+
+  /* Mobile Shop Page */
+
+  .Shop {
+    margin-bottom: 2.5em;
+  }
+
+  .expand {
+    margin-top: 2.5em;
+  }
+
+  .Shop > h3 {
+    margin-bottom: 0;
+  }
+
+  .ShopList {
+    margin-bottom: 2vh;
+    font-size: 1em;
+  }
+
+  .ShopItem {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 1em;
+  }
+
+  .ShopItem > p {
+    margin: 0 0 0 0;
+    color: #010057;
+  }
+
+  .ShopItem > button,
+  .ShopItem > input {
+    margin-top: 0.5em;
+  }
+
+  #LoadingShop {
+    color: #010057;
+  }
+
+  /* Mobile ItemDetail Page */
+
+  .ItemDetail {
+    margin-bottom: 2.5em;
+  }
+
+  .ItemDetail > h1 {
+    margin-bottom: 0;
+  }
+
+  .CurrencyRates {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .RateDate {
+    margin: 0.5em 0 0.5em 0;
+  }
+
+  .RateDate > p {
+    margin: 0 0 0 0;
+  }
+
+  .BuyItem > p {
+    margin-bottom: 0.5em;
+  }
+
+  .BuyItem > form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .BuyItem > form > input {
+    margin: 1em 0 0 0;
+  }
+
+  .BuyItem > form > button {
+    margin: 1em 0 1em 0;
+  }
+
+  /* Mobile Checkout Page */
+
+  .BasketItem {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .BasketItem > p {
+    margin: 0.5em 0 0 0;
+  }
+
+  .BasketItem > button {
+    margin: 0.5em 0 1em 0;
+  }
+
+  .EmptyBasket > p {
+    margin-top: 0.5em;
+  }
+
+  .Summary > p {
+    margin: 0.5em 0 0 0;
+  }
+}
+/* iPhone X/XS */
+@media only screen and (max-width: 375px) and (max-height: 812px) {
+  /* Mobile Home Page */
+  .Home {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .Home > h1,
+  .Home > p {
+    color: #010057;
+  }
+
+  .Home > p {
+    margin-top: 50%;
+  }
+
+  /* Mobile Shop Page */
+
+  .Shop {
+    margin-bottom: 2.5em;
+  }
+
+  .expand {
+    margin-top: 2.5em;
+  }
+
+  .Shop > h3 {
+    margin-bottom: 0;
+  }
+
+  .ShopList {
+    margin-bottom: 2vh;
+    font-size: 1em;
+  }
+
+  .ShopItem {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 1em;
+  }
+
+  .ShopItem > p {
+    margin: 0 0 0 0;
+    color: #010057;
+  }
+
+  .ShopItem > button,
+  .ShopItem > input {
+    margin-top: 0.5em;
+    margin-left: 0;
+  }
+
+  #LoadingShop {
+    color: #010057;
+  }
+
+  /* Mobile ItemDetail Page */
+
+  .ItemDetail {
+    margin-bottom: 2.5em;
+  }
+
+  .ItemDetail > h1 {
+    margin-bottom: 0;
+  }
+
+  .CurrencyRates {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .RateDate {
+    margin: 0.5em 0 0.5em 0;
+  }
+
+  .RateDate > p {
+    margin: 0 0 0 0;
+  }
+
+  .BuyItem > p {
+    margin-bottom: 0.5em;
+  }
+
+  .BuyItem > form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .BuyItem > form > input {
+    margin: 1em 0 0 0;
+  }
+
+  .BuyItem > form > button {
+    margin: 1em 0 1em 0;
+  }
+
+  /* Mobile Checkout Page */
+
+  .BasketItem {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .BasketItem > p {
+    margin: 0.5em 0 0 0;
+  }
+
+  .BasketItem > button {
+    margin: 0.5em 0 1em 0;
+  }
+
+  .EmptyBasket > p {
+    margin-top: 0.5em;
+  }
+
+  .Summary > p {
+    margin: 0.5em 0 0 0;
+  }
+}
+/* iPhone 11 6.1 and iPhone XR */
+@media only screen and (width: 828px) and (height: 1792px) {
+  #root {
+    font-size: 3em;
+  }
+
+  nav {
+    border-bottom: 0.2rem solid #020092;
+  }
+
+  /* Mobile Home Page */
+  .Home {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .Home > h1,
+  .Home > p {
+    color: #010057;
+  }
+
+  .Home > p {
+    margin-top: 50%;
+  }
+
+  /* Mobile Shop Page */
+
+  .Shop {
+    margin-bottom: 2.5em;
+  }
+
+  .expand {
+    margin-top: 2.5em;
+  }
+
+  .Shop > h3 {
+    margin-bottom: 0;
+  }
+
+  .ShopList {
+    margin-bottom: 2vh;
+    font-size: 1em;
+  }
+
+  .ShopItem {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 1em;
+  }
+
+  .ShopItem > p {
+    margin: 0 0 0 0;
+    color: #010057;
+  }
+
+  .ShopItem > button,
+  .ShopItem > input {
+    margin-top: 0.5em;
+    margin-left: 0;
+    font-size: 0.75em;
+  }
+
+  #LoadingShop {
+    color: #010057;
+  }
+
+  /* Mobile ItemDetail Page */
+
+  .ItemDetail {
+    margin-bottom: 2.5em;
+  }
+
+  .ItemDetail > h1 {
+    margin-bottom: 0;
+  }
+
+  .ItemDetail > h2 {
+    text-align: center;
+  }
+
+  .CurrencyRates {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .RateDate {
+    margin: 0.5em 0 0.5em 0;
+  }
+
+  .RateDate > p {
+    margin: 0 0 0 0;
+  }
+
+  .BuyItem > p {
+    margin-bottom: 0.5em;
+    text-align: center;
+  }
+
+  .BuyItem > form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .BuyItem > form > input {
+    margin: 1em 0 0 0;
+    font-size: 0.75em;
+  }
+
+  .BuyItem > form > button {
+    margin: 1em 0 1em 0;
+    font-size: 0.75em;
+  }
+
+  /* Mobile Checkout Page */
+
+  .BasketItem {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .BasketItem > p {
+    margin: 0.5em 0 0 0;
+  }
+
+  .BasketItem > button {
+    margin: 0.5em 0 1em 0;
+    font-size: 0.75em;
+  }
+
+  .EmptyBasket > p {
+    margin-top: 0.5em;
+  }
+
+  .Summary > p {
+    margin: 0.5em 0 0 0;
+  }
+
+  .Summary > button {
+    font-size: 0.5em;
+  }
+
+  .Footer {
+    border-top: 0.2rem solid #020092;
+    text-align: center;
+  }
+
+  .Footer > p {
+    font-size: 0.75em;
+  }
+}
+/* iPhone 12 mini 5.4 */
+@media only screen and (width: 1080px) and (height: 2340px) {
+  #root {
+    font-size: 3em;
+  }
+
+  nav {
+    border-bottom: 0.2rem solid #020092;
+  }
+
+  /* Mobile Home Page */
+  .Home {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .Home > h1,
+  .Home > p {
+    color: #010057;
+  }
+
+  .Home > p {
+    margin-top: 50%;
+  }
+
+  /* Mobile Shop Page */
+
+  .Shop {
+    margin-bottom: 2.5em;
+  }
+
+  .expand {
+    margin-top: 2.5em;
+  }
+
+  .Shop > h3 {
+    margin-bottom: 0;
+  }
+
+  .ShopList {
+    margin-bottom: 2vh;
+    font-size: 1em;
+  }
+
+  .ShopItem {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 1em;
+  }
+
+  .ShopItem > p {
+    margin: 0 0 0 0;
+    color: #010057;
+  }
+
+  .ShopItem > button,
+  .ShopItem > input {
+    margin-top: 0.5em;
+    margin-left: 0;
+    font-size: 1em;
+  }
+
+  #LoadingShop {
+    color: #010057;
+  }
+
+  /* Mobile ItemDetail Page */
+
+  .ItemDetail {
+    margin-bottom: 2.5em;
+  }
+
+  .ItemDetail > h1 {
+    margin-bottom: 0;
+  }
+
+  .ItemDetail > h2 {
+    text-align: center;
+  }
+
+  .CurrencyRates {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .RateDate {
+    margin: 0.5em 0 0.5em 0;
+  }
+
+  .RateDate > p {
+    margin: 0 0 0 0;
+  }
+
+  .BuyItem > p {
+    margin-bottom: 0.5em;
+    text-align: center;
+  }
+
+  .BuyItem > form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .BuyItem > form > input {
+    margin: 1em 0 0 0;
+    font-size: 1em;
+  }
+
+  .BuyItem > form > button {
+    margin: 1em 0 1em 0;
+    font-size: 1em;
+  }
+
+  /* Mobile Checkout Page */
+
+  .BasketItem {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .BasketItem > p {
+    margin: 0.5em 0 0 0;
+  }
+
+  .BasketItem > button {
+    margin: 0.5em 0 1em 0;
+    font-size: 0.75em;
+  }
+
+  .EmptyBasket > p {
+    margin-top: 0.5em;
+  }
+
+  .Summary > p {
+    margin: 0.5em 0 0 0;
+  }
+
+  .Summary > button {
+    font-size: 0.5em;
+  }
+
+  .Footer {
+    border-top: 0.2rem solid #020092;
+    text-align: center;
+  }
+
+  .Footer > p {
+    font-size: 0.75em;
+  }
+}
+/* iPhone 12 and 12 Pro 6.1 */
+@media only screen and (width: 1170px) and (height: 2532px) {
+  #root {
+    font-size: 4em;
+  }
+
+  nav {
+    border-bottom: 0.2rem solid #020092;
+  }
+
+  /* Mobile Home Page */
+  .Home {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .Home > h1,
+  .Home > p {
+    color: #010057;
+  }
+
+  .Home > p {
+    margin-top: 50%;
+  }
+
+  /* Mobile Shop Page */
+
+  .Shop {
+    margin-bottom: 2.5em;
+  }
+
+  .expand {
+    margin-top: 2.5em;
+  }
+
+  .Shop > h3 {
+    margin-bottom: 0;
+  }
+
+  .ShopList {
+    margin-bottom: 2vh;
+    font-size: 1em;
+  }
+
+  .ShopItem {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 1em;
+  }
+
+  .ShopItem > p {
+    margin: 0 0 0 0;
+    color: #010057;
+  }
+
+  .ShopItem > button,
+  .ShopItem > input {
+    margin-top: 0.5em;
+    margin-left: 0;
+    font-size: 1em;
+  }
+
+  #LoadingShop {
+    color: #010057;
+  }
+
+  /* Mobile ItemDetail Page */
+
+  .ItemDetail {
+    margin-bottom: 2.5em;
+  }
+
+  .ItemDetail > h1 {
+    margin-bottom: 0;
+  }
+
+  .ItemDetail > h2 {
+    text-align: center;
+  }
+
+  .CurrencyRates {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .RateDate {
+    margin: 0.5em 0 0.5em 0;
+  }
+
+  .RateDate > p {
+    margin: 0 0 0 0;
+  }
+
+  .BuyItem > p {
+    margin-bottom: 0.5em;
+    text-align: center;
+  }
+
+  .BuyItem > form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .BuyItem > form > input {
+    margin: 1em 0 0 0;
+    font-size: 1em;
+  }
+
+  .BuyItem > form > button {
+    margin: 1em 0 1em 0;
+    font-size: 1em;
+  }
+
+  /* Mobile Checkout Page */
+
+  .BasketItem {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .BasketItem > p {
+    margin: 0.5em 0 0 0;
+  }
+
+  .BasketItem > button {
+    margin: 0.5em 0 1em 0;
+    font-size: 0.75em;
+  }
+
+  .EmptyBasket > p {
+    margin-top: 0.5em;
+  }
+
+  .Summary > p {
+    margin: 0.5em 0 0 0;
+  }
+
+  .Summary > button {
+    font-size: 0.5em;
+  }
+
+  .Footer {
+    border-top: 0.2rem solid #020092;
+    text-align: center;
+  }
+
+  .Footer > p {
+    font-size: 0.75em;
+  }
+}
+/* iPhone 12 Pro 6.7 */
+@media only screen and (width: 1284px) and (height: 2778px) {
+  #root {
+    font-size: 4em;
+  }
+
+  nav {
+    border-bottom: 0.2rem solid #020092;
+  }
+
+  /* Mobile Home Page */
+  .Home {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .Home > h1,
+  .Home > p {
+    color: #010057;
+  }
+
+  .Home > p {
+    margin-top: 50%;
+  }
+
+  /* Mobile Shop Page */
+
+  .Shop {
+    margin-bottom: 2.5em;
+  }
+
+  .expand {
+    margin-top: 2.5em;
+  }
+
+  .Shop > h3 {
+    margin-bottom: 0;
+  }
+
+  .ShopList {
+    margin-bottom: 2vh;
+    font-size: 1em;
+  }
+
+  .ShopItem {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 1em;
+  }
+
+  .ShopItem > p {
+    margin: 0 0 0 0;
+    color: #010057;
+  }
+
+  .ShopItem > button,
+  .ShopItem > input {
+    margin-top: 0.5em;
+    margin-left: 0;
+    font-size: 1em;
+  }
+
+  #LoadingShop {
+    color: #010057;
+  }
+
+  /* Mobile ItemDetail Page */
+
+  .ItemDetail {
+    margin-bottom: 2.5em;
+  }
+
+  .ItemDetail > h1 {
+    margin-bottom: 0;
+  }
+
+  .ItemDetail > h2 {
+    text-align: center;
+  }
+
+  .CurrencyRates {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .RateDate {
+    margin: 0.5em 0 0.5em 0;
+  }
+
+  .RateDate > p {
+    margin: 0 0 0 0;
+  }
+
+  .BuyItem > p {
+    margin-bottom: 0.5em;
+    text-align: center;
+  }
+
+  .BuyItem > form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .BuyItem > form > input {
+    margin: 1em 0 0 0;
+    font-size: 1em;
+  }
+
+  .BuyItem > form > button {
+    margin: 1em 0 1em 0;
+    font-size: 1em;
+  }
+
+  /* Mobile Checkout Page */
+
+  .BasketItem {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .BasketItem > p {
+    margin: 0.5em 0 0 0;
+  }
+
+  .BasketItem > button {
+    margin: 0.5em 0 1em 0;
+    font-size: 0.75em;
+  }
+
+  .EmptyBasket > p {
+    margin-top: 0.5em;
+  }
+
+  .Summary > p {
+    margin: 0.5em 0 0 0;
+  }
+
+  .Summary > button {
+    font-size: 0.5em;
+  }
+
+  .Footer {
+    border-top: 0.2rem solid #020092;
+    text-align: center;
+  }
+
+  .Footer > p {
+    font-size: 0.75em;
+  }
+}
+
+/* SAMSUNG */
+/* samsung a20e */
+@media only screen and (width: 720px) and (height: 1560px) {
+  #root {
+    font-size: 3em;
+  }
+
+  nav {
+    border-bottom: 0.2rem solid #020092;
+  }
+
+  /* Mobile Home Page */
+  .Home {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .Home > h1,
+  .Home > p {
+    color: #010057;
+  }
+
+  .Home > p {
+    margin-top: 50%;
+  }
+
+  /* Mobile Shop Page */
+
+  .Shop {
+    margin-bottom: 2.5em;
+  }
+
+  .expand {
+    margin-top: 2.5em;
+  }
+
+  .Shop > h3 {
+    margin-bottom: 0;
+  }
+
+  .ShopList {
+    margin-bottom: 2vh;
+    font-size: 1em;
+  }
+
+  .ShopItem {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 1em;
+  }
+
+  .ShopItem > p {
+    margin: 0 0 0 0;
+    color: #010057;
+  }
+
+  .ShopItem > button,
+  .ShopItem > input {
+    margin-top: 0.5em;
+    margin-left: 0;
+    font-size: 0.75em;
+  }
+
+  #LoadingShop {
+    color: #010057;
+  }
+
+  /* Mobile ItemDetail Page */
+
+  .ItemDetail {
+    margin-bottom: 2.5em;
+  }
+
+  .ItemDetail > h1 {
+    margin-bottom: 0;
+  }
+
+  .ItemDetail > h2 {
+    text-align: center;
+  }
+
+  .CurrencyRates {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .RateDate {
+    margin: 0.5em 0 0.5em 0;
+  }
+
+  .RateDate > p {
+    margin: 0 0 0 0;
+  }
+
+  .BuyItem > p {
+    margin-bottom: 0.5em;
+    text-align: center;
+  }
+
+  .BuyItem > form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .BuyItem > form > input {
+    margin: 1em 0 0 0;
+    font-size: 0.75em;
+  }
+
+  .BuyItem > form > button {
+    margin: 1em 0 1em 0;
+    font-size: 0.75em;
+  }
+
+  /* Mobile Checkout Page */
+
+  .BasketItem {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .BasketItem > p {
+    margin: 0.5em 0 0 0;
+  }
+
+  .BasketItem > button {
+    margin: 0.5em 0 1em 0;
+    font-size: 0.75em;
+  }
+
+  .EmptyBasket > p {
+    margin-top: 0.5em;
+  }
+
+  .Summary > p {
+    margin: 0.5em 0 0 0;
+  }
+
+  .Summary > button {
+    font-size: 0.5em;
+  }
+
+  .Footer {
+    border-top: 0.2rem solid #020092;
+    text-align: center;
+  }
+
+  .Footer > p {
+    font-size: 0.75em;
+  }
+}
+/* samsung a21s */
+@media only screen and (width: 720px) and (height: 1600px) {
+  #root {
+    font-size: 3em;
+  }
+
+  nav {
+    border-bottom: 0.2rem solid #020092;
+  }
+
+  /* Mobile Home Page */
+  .Home {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .Home > h1,
+  .Home > p {
+    color: #010057;
+  }
+
+  .Home > p {
+    margin-top: 50%;
+  }
+
+  /* Mobile Shop Page */
+
+  .Shop {
+    margin-bottom: 2.5em;
+  }
+
+  .expand {
+    margin-top: 2.5em;
+  }
+
+  .Shop > h3 {
+    margin-bottom: 0;
+  }
+
+  .ShopList {
+    margin-bottom: 2vh;
+    font-size: 1em;
+  }
+
+  .ShopItem {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 1em;
+  }
+
+  .ShopItem > p {
+    margin: 0 0 0 0;
+    color: #010057;
+  }
+
+  .ShopItem > button,
+  .ShopItem > input {
+    margin-top: 0.5em;
+    margin-left: 0;
+    font-size: 0.75em;
+  }
+
+  #LoadingShop {
+    color: #010057;
+  }
+
+  /* Mobile ItemDetail Page */
+
+  .ItemDetail {
+    margin-bottom: 2.5em;
+  }
+
+  .ItemDetail > h1 {
+    margin-bottom: 0;
+  }
+
+  .ItemDetail > h2 {
+    text-align: center;
+  }
+
+  .CurrencyRates {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .RateDate {
+    margin: 0.5em 0 0.5em 0;
+  }
+
+  .RateDate > p {
+    margin: 0 0 0 0;
+  }
+
+  .BuyItem > p {
+    margin-bottom: 0.5em;
+    text-align: center;
+  }
+
+  .BuyItem > form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .BuyItem > form > input {
+    margin: 1em 0 0 0;
+    font-size: 0.75em;
+  }
+
+  .BuyItem > form > button {
+    margin: 1em 0 1em 0;
+    font-size: 0.75em;
+  }
+
+  /* Mobile Checkout Page */
+
+  .BasketItem {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .BasketItem > p {
+    margin: 0.5em 0 0 0;
+  }
+
+  .BasketItem > button {
+    margin: 0.5em 0 1em 0;
+    font-size: 0.75em;
+  }
+
+  .EmptyBasket > p {
+    margin-top: 0.5em;
+  }
+
+  .Summary > p {
+    margin: 0.5em 0 0 0;
+  }
+
+  .Summary > button {
+    font-size: 0.5em;
+  }
+
+  .Footer {
+    border-top: 0.2rem solid #020092;
+    text-align: center;
+  }
+
+  .Footer > p {
+    font-size: 0.75em;
+  }
+}
+/* samsung s9/s9+ */
+@media only screen and (max-width: 360px) and (max-height: 740px) {
+  /* Mobile Home Page */
+  .Home {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .Home > h1,
+  .Home > p {
+    color: #010057;
+  }
+
+  .Home > p {
+    margin-top: 50%;
+  }
+
+  /* Mobile Shop Page */
+
+  .Shop {
+    margin-bottom: 2.5em;
+  }
+
+  .expand {
+    margin-top: 2.5em;
+  }
+
+  .Shop > h3 {
+    margin-bottom: 0;
+  }
+
+  .ShopList {
+    margin-bottom: 2vh;
+    font-size: 1em;
+  }
+
+  .ShopItem {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 1em;
+  }
+
+  .ShopItem > p {
+    margin: 0 0 0 0;
+    color: #010057;
+  }
+
+  .ShopItem > button,
+  .ShopItem > input {
+    margin-top: 0.5em;
+    margin-left: 0;
+  }
+
+  #LoadingShop {
+    color: #010057;
+  }
+
+  /* Mobile ItemDetail Page */
+
+  .ItemDetail {
+    margin-bottom: 2.5em;
+  }
+
+  .ItemDetail > h1 {
+    margin-bottom: 0;
+  }
+
+  .CurrencyRates {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .RateDate {
+    margin: 0.5em 0 0.5em 0;
+  }
+
+  .RateDate > p {
+    margin: 0 0 0 0;
+  }
+
+  .BuyItem > p {
+    margin-bottom: 0.5em;
+  }
+
+  .BuyItem > form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .BuyItem > form > input {
+    margin: 1em 0 0 0;
+  }
+
+  .BuyItem > form > button {
+    margin: 1em 0 1em 0;
+  }
+
+  /* Mobile Checkout Page */
+
+  .BasketItem {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .BasketItem > p {
+    margin: 0.5em 0 0 0;
+  }
+
+  .BasketItem > button {
+    margin: 0.5em 0 1em 0;
+  }
+
+  .EmptyBasket > p {
+    margin-top: 0.5em;
+  }
+
+  .Summary > p {
+    margin: 0.5em 0 0 0;
+  }
+}
+/* samsung s20 */
+@media only screen and (width: 1400px) and (height: 3200px) {
+  #root {
+    font-size: 4em;
+  }
+
+  nav {
+    border-bottom: 0.2rem solid #020092;
+  }
+
+  /* Mobile Home Page */
+  .Home {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .Home > h1,
+  .Home > p {
+    color: #010057;
+  }
+
+  .Home > p {
+    margin-top: 50%;
+  }
+
+  /* Mobile Shop Page */
+
+  .Shop {
+    margin-bottom: 2.5em;
+  }
+
+  .expand {
+    margin-top: 2.5em;
+  }
+
+  .Shop > h3 {
+    margin-bottom: 0;
+  }
+
+  .ShopList {
+    margin-bottom: 2vh;
+    font-size: 1em;
+  }
+
+  .ShopItem {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 1em;
+  }
+
+  .ShopItem > p {
+    margin: 0 0 0 0;
+    color: #010057;
+  }
+
+  .ShopItem > button,
+  .ShopItem > input {
+    margin-top: 0.5em;
+    margin-left: 0;
+    font-size: 1em;
+  }
+
+  #LoadingShop {
+    color: #010057;
+  }
+
+  /* Mobile ItemDetail Page */
+
+  .ItemDetail {
+    margin-bottom: 2.5em;
+  }
+
+  .ItemDetail > h1 {
+    margin-bottom: 0;
+  }
+
+  .ItemDetail > h2 {
+    text-align: center;
+  }
+
+  .CurrencyRates {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .RateDate {
+    margin: 0.5em 0 0.5em 0;
+  }
+
+  .RateDate > p {
+    margin: 0 0 0 0;
+  }
+
+  .BuyItem > p {
+    margin-bottom: 0.5em;
+    text-align: center;
+  }
+
+  .BuyItem > form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .BuyItem > form > input {
+    margin: 1em 0 0 0;
+    font-size: 1em;
+  }
+
+  .BuyItem > form > button {
+    margin: 1em 0 1em 0;
+    font-size: 1em;
+  }
+
+  /* Mobile Checkout Page */
+
+  .BasketItem {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .BasketItem > p {
+    margin: 0.5em 0 0 0;
+  }
+
+  .BasketItem > button {
+    margin: 0.5em 0 1em 0;
+    font-size: 0.75em;
+  }
+
+  .EmptyBasket > p {
+    margin-top: 0.5em;
+  }
+
+  .Summary > p {
+    margin: 0.5em 0 0 0;
+  }
+
+  .Summary > button {
+    font-size: 0.5em;
+  }
+
+  .Footer {
+    border-top: 0.2rem solid #020092;
+    text-align: center;
+  }
+
+  .Footer > p {
+    font-size: 0.75em;
+  }
 }
