@@ -6,6 +6,7 @@ import {
   Link
 } from 'react-router-dom';
 import Home from './components/Home';
+import StickyBar from './components/StickyBar';
 import Shop from './components/shop-components/Shop';
 import ItemDetail from './components/shop-components/ItemDetail';
 import Checkout from './components/checkout-components/Checkout';
@@ -47,23 +48,21 @@ function App() {
     <Router>
       <div className="AppContent">
         <nav>
-              <Link to="/shopping-cart/" id="HomeLink">Home</Link>
-              <Link to="/shop" id="ShopLink">Shop</Link>
+          <Link to="/shopping-cart/" id="HomeLink">Home</Link>
+          <Link to="/shop" id="ShopLink">Shop</Link>
         </nav>
         <Switch>
           <Route exact path="/shopping-cart/">
             <Home />
           </Route>
           <Route exact path="/shop">
-            <div className="StickyBar" id="stickyNav">
-              <p>Items in Basket: {basket.length}</p>
-              <Link to="/checkout">Checkout</Link>
-            </div>
-            <Shop 
-              onSubmit={handleSubmit}
-            />
+            <StickyBar basketLength={basket.length}/>
+            <Shop onSubmit={handleSubmit} />
           </Route>
-          <Route path="/shop/:currency" component={ItemDetail}/>
+          <Route path="/shop/:currency">
+            <StickyBar basketLength={basket.length}/>
+            <ItemDetail onSubmit={handleSubmit}/>
+          </Route>
           <Route path="/checkout">
             <Checkout basket={basket} onRemove={handleRemove}/>
           </Route>

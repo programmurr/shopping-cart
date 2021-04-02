@@ -69,36 +69,30 @@ function Shop(props) {
     fetchCurrencies();
   }, [])
 
-  
-
   return (
-      <div className="Shop" id="shopPage">
-        <h2>Buy Currency!</h2>
-        <div className="ShopList">
-        {Object.entries(currencies).map(([currency, rate]) => (
-          currency === 'GBP' ? 
-            <div key={currency} className="ShopItem" id="BaseCurrency">
-              <p>Base Currency: {currency}</p>
-              <p>Rate: {rate}.00</p>
-            </div>
-            : <form onSubmit={handleSubmit} key={currency} className="ShopItem">
-                <Link to={`/shop/${currency}`}>Currency code: {currency}</Link>
-                <p id="rate">Rate: {rate.toFixed(2)}</p>
-                <label htmlFor={currency}>Amount (1-100 units)</label>
-                <input 
-                  type="number" 
-                  id={currency} 
-                  name={currency} 
-                  min="1" 
-                  max="100" 
-                  amount={buyAmount}
-                  onChange={handleChange}
-                />
-                <button>Buy!</button>
-              </form>
-        ))}
-        </div>
+    <div className="Shop" id="shopPage">
+      <h2>Buy Currency!</h2>
+      <h3>Base Rate: GBP</h3>
+      <div className="ShopList">
+      {Object.entries(currencies).map(([currency, rate]) => (
+        <form onSubmit={handleSubmit} key={currency} className="ShopItem">
+          <Link to={`/shop/${currency}`}>Currency code: {currency}</Link>
+          <p id="rate">Rate: {rate.toFixed(2)}</p>
+          <label htmlFor={currency}>Amount (1-100 units)</label>
+          <input 
+            type="number" 
+            id={currency} 
+            name={currency} 
+            min="1" 
+            max="100" 
+            amount={buyAmount}
+            onChange={handleChange}
+          />
+          <button>Buy!</button>
+        </form>
+      ))}
       </div>
+    </div>
   );
 }
 

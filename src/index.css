@@ -90,7 +90,8 @@ nav > a:hover {
   margin-top: 2.5em;
 }
 
-.Shop > h2 {
+.Shop > h2,
+.Shop > h3 {
   display: flex;
   justify-content: center;
   color: #010057;
@@ -122,8 +123,50 @@ nav > a:hover {
   margin-left: 1em;
 }
 
-#BaseCurrency {
-  font-weight: bold;
+/* Item Details Page */
+
+.ItemDetail {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  color: #010057;
+}
+
+.ItemDetail > h1,
+.ItemDetail > h2 {
+  display: flex;
+  justify-content: center;
+}
+
+.CurrencyRates {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+}
+
+.RateDate {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.BuyItem {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: #010057;
+}
+.BuyItem > h3 {
+  margin: 1em 0 0.5em 0;
+}
+.BuyItem > p {
+  margin-top: 0;
+}
+
+.BuyItem > form > input,
+.BuyItem > form > button {
+  margin-left: 1em;
 }
 
 /* Checkout Page */
@@ -131,6 +174,7 @@ nav > a:hover {
   display: grid;
   grid-template-columns: 50% 50%;
   grid-template-rows: auto auto;
+  color: #010057;
 }
 
 .Checkout > h2 {

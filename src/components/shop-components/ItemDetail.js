@@ -3,11 +3,12 @@ import { useParams } from 'react-router-dom';
 import { format, compareAsc, subDays } from 'date-fns';
 import parseISO from 'date-fns/parseISO'
 
-function ItemDetail() {
+function ItemDetail(props) {
   let { currency } = useParams();
   const today = format(new Date(), 'yyyy-MM-dd');
   const lastWeek = format(subDays(new Date(), 8), 'yyyy-MM-dd');
   const [ historyRates, setHistoryRates ] = useState({});
+  const [ buyAmount, setBuyAmount ] = useState("");
 
   useEffect(() => {
     fetchItem();
@@ -60,6 +61,32 @@ function ItemDetail() {
       });
     }
 
+    const handleChange = (e) => {
+      setBuyAmount(e.target.value);
+    }
+
+    const handleSubmit = (e) => {
+      e.preventDefault();
+
+      const form = e.target;
+      const input = form.querySelector('input');
+      const amount = parseInt(buyAmount);
+      const rate = historyRates[historyRates.length -1][1];
+
+      if (buyAmount === "") {
+        alert('Please enter a currency amount between 1 and 100 units');
+        return;
+      }
+      props.onSubmit({
+        currency: input.name,
+        rate: rate,
+        amount: amount
+      });
+  
+      input.value = "";
+      setBuyAmount("");
+    }
+
     if (historyRates.length > 0) {
       return (
         <div className="ItemDetail">
@@ -72,6 +99,23 @@ function ItemDetail() {
                 <p>Rate: {rate[1]}</p>
               </div>
             ))}
+          </div>
+          <div className="BuyItem">
+            <h3>Buy Here!</h3>
+            <p>The current rate is 1GBP = {historyRates[historyRates.length -1][1]} {currency}</p>
+            <form onSubmit={handleSubmit}>
+              <label htmlFor={currency}>Amount (1-100 units)</label>
+              <input 
+                type="number" 
+                id={currency} 
+                name={currency} 
+                min="1" 
+                max="100" 
+                amount={buyAmount}
+                onChange={handleChange}
+              />
+              <button>Buy!</button>
+            </form>
           </div>
         </div>
       )
