@@ -12,7 +12,7 @@ An assignment from [The Odin Project](https://www.theodinproject.com/lessons/sho
 5. Once a user has submitted their order, the amount on the cart itself should adjust
 6. Style the application
 
-## Status: In Progress
+## Status: Complete!
 
-View my progress live on [Github Pages](https://programmurr.github.io/shopping-cart/)
+View it live on [Github Pages](https://programmurr.github.io/shopping-cart/)
 
